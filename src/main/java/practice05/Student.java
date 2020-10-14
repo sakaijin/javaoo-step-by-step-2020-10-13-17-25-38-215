@@ -1,9 +1,9 @@
 package practice05;
 
 public class Student {
-    String name;
-    int age;
-    int klass;
+    private String name;
+    private int age;
+    private final int klass;
 
     public Student(String name, int age, int klass) {
         this.name = name;
@@ -29,10 +29,6 @@ public class Student {
 
     public int getKlass() {
         return klass;
-    }
-
-    public void setKlass(int klass) {
-        this.klass = klass;
     }
 
     public String introduce() {
