@@ -27,8 +27,6 @@ public class Student extends Person{
         if (klass.getLeader() != this){
             return "My name is " + name + ". I am " + age + " years old. I am a Student. I am at Class " + klass.getNumber() + ".";
         }
-        else{
-            return "My name is " + name + ". I am " + age + " years old. I am a Student. I am Leader of Class " + klass.getNumber() + ".";
-        }
+        return "My name is " + name + ". I am " + age + " years old. I am a Student. I am Leader of Class " + klass.getNumber() + ".";
     }
 }
