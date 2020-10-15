@@ -1,13 +1,12 @@
 package practice10;
 
-public class Klass {
-    int number;
-    Student leader;
-    Student member;
+import java.util.ArrayList;
+import java.util.List;
 
-    public Student getMember() {
-        return member;
-    }
+public class Klass {
+    private int number;
+    private Student leader;
+    private List<Student> students = new ArrayList<>();
 
     public Klass(int number) {
         this.number = number;
@@ -25,19 +24,15 @@ public class Klass {
         return leader;
     }
 
-    public void appendMember(Student member){
-        this.member = member;
+    public void appendMember(Student student){
+        this.students.add(student);
     }
 
     public void assignLeader(Student leader) {
-        if (leader.equals(member)){
+        if (students.stream().anyMatch(student -> student.getName().equals(leader.getName()))){
             this.leader = leader;
         }else{
             System.out.print("It is not one of us.\n");
         }
-    }
-
-    public boolean isIn(){
-        return true;
     }
 }
